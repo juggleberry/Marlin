@@ -22,6 +22,7 @@
 
 #ifndef __SERIAL_H__
 #define __SERIAL_H__
+#include "MarlinConfig.h"
 
 #ifdef USBCON
   #include "HardwareSerial.h"
