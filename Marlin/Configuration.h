@@ -255,7 +255,8 @@
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_4 0
-#define TEMP_SENSOR_BED 7
+#define TEMP_SENSOR_BED 11 // 100k NTC 3950
+//#define TEMP_SENSOR_BED 7 original printrbot thermistor
 
 // Dummy thermistor constant temperature readings, for use with 998 and 999
 #define DUMMY_THERMISTOR_998_VALUE 25
@@ -346,7 +347,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -362,9 +363,17 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define  DEFAULT_bedKp 10.00
-  #define  DEFAULT_bedKi .023
-  #define  DEFAULT_bedKd 305.4
+  //#define  DEFAULT_bedKp 10.00
+  //#define  DEFAULT_bedKi .023
+  //#define  DEFAULT_bedKd 305.4
+
+  //220v 500w silicone heater keenovo on mic6 aluminium bed
+  //#define  DEFAULT_bedKp 100.21
+  //#define  DEFAULT_bedKi 18.54
+  //#define  DEFAULT_bedKd 135.45
+  #define  DEFAULT_bedKp 85.78
+  #define  DEFAULT_bedKi 15.40
+  #define  DEFAULT_bedKd 119.46
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
