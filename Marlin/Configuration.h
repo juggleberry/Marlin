@@ -919,7 +919,7 @@
   #define ABL_PROBE_PT_1_Y 152
   #define ABL_PROBE_PT_2_X 20
   #define ABL_PROBE_PT_2_Y 0
-  #define ABL_PROBE_PT_3_X 250
+  #define ABL_PROBE_PT_3_X 245
   #define ABL_PROBE_PT_3_Y 0
 
 #elif ENABLED(AUTO_BED_LEVELING_UBL)
